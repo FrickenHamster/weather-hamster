@@ -12,7 +12,8 @@ export default class WeatherDisplay extends Component {
 	fetchData() {
 		if (!this.state.zip || this.state.zip.length < 5)
 			return;
-		fetch(`http://127.0.0.1:3000?zip=${this.state.zip}`, {
+		fetch(`https://weatherapi-dot-ham-weather.appspot.com/api/v1/forecast?zip=${this.state.zip}`, {
+		//fetch(`http://127.0.0.1:8081/api/v1/forecast?zip=${this.state.zip}`, {
 			method: 'get',
 			headers: {
 				'Accept': 'application/json, text/plain, */*',

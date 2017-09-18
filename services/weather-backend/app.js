@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 app.use(logger('dev'));
 
 
-app.get('/', (req, res) => {
+app.get('/api/v1/forecast', (req, res) => {
 	fetch(`http://api.openweathermap.org/data/2.5/forecast?zip=${req.query.zip}&appid=f0de56345b0178a94e47640203ebd478&units=imperial`)
 		.then(data => {
 			data.json().then(json => {
@@ -56,7 +56,7 @@ app.get('/', (req, res) => {
 		});
 });
 
-
-app.listen(3000, () => {
-	console.log('Weather Backend listening on port 3000');
+const PORT = process.env.PORT || 8081;
+app.listen(PORT, () => {
+	console.log(`Weather Backend listening on port ${PORT}`);
 });

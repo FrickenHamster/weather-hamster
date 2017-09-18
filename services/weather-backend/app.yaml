@@ -1,0 +1,6 @@
+runtime: nodejs
+env: flex
+service: weatherapi
+
+env_variables:
+  NODE_ENV: production

@@ -4,7 +4,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "nodemon app.js",
+		"start": "node app.js",
+		"build": "webpack --config webpack.prod.js",
+		"nodemon": "nodemon app.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "",
@@ -15,10 +17,12 @@
 		"babel-preset-es2015": "^6.24.1",
 		"babel-preset-react": "^6.24.1",
 		"body-parser": "^1.18.0",
-		"bootstrap": "^4.0.0-alpha.6",
+		"bootstrap": "4.0.0-alpha.6",
 		"css-loader": "^0.28.7",
+		"dropdown": "^0.2.0",
 		"express": "^4.15.4",
 		"extract-text-webpack-plugin": "^3.0.0",
+		"jquery": "^3.2.1",
 		"morgan": "^1.8.2",
 		"node-sass": "^4.5.3",
 		"path": "^0.12.7",
@@ -26,11 +30,15 @@
 		"react-bootstrap": "^0.31.3",
 		"react-dom": "^15.6.1",
 		"sass-loader": "^6.0.6",
+		"style-loader": "^0.18.2",
+		"tether": "^1.4.0",
+		"util": "^0.10.3",
 		"webpack": "^3.5.6"
 	},
 	"devDependencies": {
 		"nodemon": "^1.12.0",
 		"webpack-dev-middleware": "^1.12.0",
-		"webpack-hot-middleware": "^2.19.1"
+		"webpack-hot-middleware": "^2.19.1",
+		"webpack-merge": "^4.1.0"
 	}
 }
